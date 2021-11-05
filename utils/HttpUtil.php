@@ -11,8 +11,8 @@ class HttpUtil{
     public  function __construct(){
 
         $this->CI = & get_instance();
-        $this->client = new Client(['base_uri' => URL1]);
-        $this->client2 = new Client(['base_uri' => URL2]);
+        $this->client = new Client(['base_uri' => BIO_URL]);
+        $this->ihrisclient = new Client(['base_uri' => iHRIS_URL]);
     }
 
     public function sendRequest($endpoint = "",$method="",$headers = [],$body = []){
@@ -24,7 +24,7 @@ class HttpUtil{
     public function sendiHRISRequest($endpoint = "",$method="",$headers = [],$body = []){
        
         $request = new Request($method,$endpoint."/", $headers,json_encode($body));
-        $response =  $this->client2->send($request);
+        $response =  $this->ihrisclient->send($request);
         return json_decode( (string) $response->getBody()->getContents());
         //$result = json_decode($response->getBody()->getContents());
     }
@@ -32,7 +32,7 @@ class HttpUtil{
     public function getData($endpoint, $method="",$headers = [],$options)
     {
       
-       $url=URL1.$endpoint;
+       $url=BIO_URL.$endpoint;
 
     
 
@@ -57,7 +57,7 @@ class HttpUtil{
     {
         // die(var_dump($this->get_jwt_auth()));
       
-       $url=URL1.$endpoint;
+       $url=BIO_URL.$endpoint;
 
         //do{
             $response = $this->client->request(
@@ -76,7 +76,7 @@ class HttpUtil{
     {
         // die(var_dump($this->get_jwt_auth()));
       
-       $url=URL1.$endpoint;
+       $url=BIO_URL.$endpoint;
 
         //do{
             $response = $this->client->request(
@@ -111,7 +111,7 @@ class HttpUtil{
     //http requests
 
  public function curlsendHttpPost($endpoint,$headers,$body){
-    $url=URL1.$endpoint;
+    $url=BIO_URL.$endpoint;
     $ch = curl_init($url);
 
      //post values
@@ -144,7 +144,7 @@ class HttpUtil{
 }
 
 public function curlgetHttp($endpoint,$headers,$body){
-    $url=URL1.$endpoint;
+    $url=BIO_URL.$endpoint;
     $ch = curl_init($url);
 
      //post values

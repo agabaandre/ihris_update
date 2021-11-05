@@ -17,6 +17,9 @@ class Data extends MX_Controller {
 		            'uptitle'=>"iHRIS Updates Data",'view'=>"data");
 	echo Modules::run('templates/main',$data);
 	}
+	public function forms{
+		
+	}
 
 
 
