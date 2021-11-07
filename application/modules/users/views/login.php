@@ -150,7 +150,7 @@ input[type=submit], p.field span.i {
                         <div class="view-header">
                            
                              <div class="header-title" style="text-align:center; margin: 0 auto;">
-                                <h4>National HRH DashBoard Login</h4>
+                                <h4>WHO iHRIS Mobile Update Tool</h4>
                             </div>
                         </div>
                        <div class="row">

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User extends MX_Controller {
+class Users extends MX_Controller {
  	
  	public function __construct()
  	{
@@ -10,23 +10,28 @@ class User extends MX_Controller {
  		$this->load->model(array(
  			'user_model'  
  		));
- 		
-		if (! $this->session->userdata('isAdmin'))
-			redirect('login');
- 	}
+	}
+
 	public function index()
 	{ 
+		$this->load->view('login');
+	}
+
+	public function list()
+	{ 
 		$data['title']      = display('user_list');
-		$data['module'] 	= "auth";  
+		$data['module'] 	= "user";  
 		$data['page']   	= "list";   
 		$data['user'] = $this->user_model->read();
 		echo Modules::run('template/main', $data); 
 	}
+
 	public function login()
-	{  
+	{   
+		 
 		if ($this->session->userdata('isLogIn'))
-		redirect('dashboard/home');
-		$data['title']    = display('login'); 
+		redirect('dashboard');
+		$data['title']    = "login"; 
 		$this->form_validation->set_rules('email', display('email'), 'required|valid_email|max_length[100]|trim');
 		$this->form_validation->set_rules('password', display('password'), 'required|max_length[32]|md5|trim');
 		#-------------------------------------#
@@ -64,7 +69,7 @@ class User extends MX_Controller {
 					$this->user_model->last_login();
 					
 					$this->session->set_flashdata('message', display('welcome_back').' '.$user->row()->fullname);
-					redirect('dashboard/home');
+					redirect('dashboard');
 
 			} else {
 				$this->session->set_flashdata('exception', display('incorrect_email_or_password'));
@@ -72,7 +77,7 @@ class User extends MX_Controller {
 			} 
 
 		} else {
-			echo Modules::run('template/login', $data);
+			echo Modules::run('user', $data);
 		}
 	}
 
