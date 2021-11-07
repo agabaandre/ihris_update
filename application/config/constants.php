@@ -47,8 +47,8 @@ defined('FOPEN_WRITE_CREATE')                   OR define('FOPEN_WRITE_CREATE', 
 defined('FOPEN_READ_WRITE_CREATE')              OR define('FOPEN_READ_WRITE_CREATE', 'a+b');
 defined('FOPEN_WRITE_CREATE_STRICT')            OR define('FOPEN_WRITE_CREATE_STRICT', 'xb');
 defined('FOPEN_READ_WRITE_CREATE_STRICT')       OR define('FOPEN_READ_WRITE_CREATE_STRICT', 'x+b');
-defined('URL1')  OR define('BIO_URL1', 'http://172.27.1.101:8095/');
-defined('URL2')  OR define('URL2', 'http://172.27.1.101:8095/');
+defined('URL1')  OR define('API_URL', 'https://hris2.health.go.ug/who_tool/');
+
 
 /*
 |--------------------------------------------------------------------------
