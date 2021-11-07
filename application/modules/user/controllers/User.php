@@ -14,7 +14,6 @@ class User extends MX_Controller {
 		if (! $this->session->userdata('isAdmin'))
 			redirect('login');
  	}
- 
 	public function index()
 	{ 
 		$data['title']      = display('user_list');
@@ -24,15 +23,68 @@ class User extends MX_Controller {
 		echo Modules::run('template/main', $data); 
 	}
 	public function login()
+	{  
+		if ($this->session->userdata('isLogIn'))
+		redirect('dashboard/home');
+		$data['title']    = display('login'); 
+		$this->form_validation->set_rules('email', display('email'), 'required|valid_email|max_length[100]|trim');
+		$this->form_validation->set_rules('password', display('password'), 'required|max_length[32]|md5|trim');
+		#-------------------------------------#
+		$data['user'] = (object)$userData = array(
+			'email' 	 => $this->input->post('email'),
+			'password'   => $this->input->post('password'),
+		);
+		#-------------------------------------#
+		if ( $this->form_validation->run())
+		{
+			$user = $this->user_model->checkUser($userData);
+		if($user->num_rows() > 0) {
+
+			if($user->row()->is_admin == 2){
+				$row = $this->db->select('client_id,client_email')->where('client_email',$user->row()->email)->get('setup_client_tbl')->row();
+			}
+             	$sData = array(
+					'isLogIn' 	  => true,
+					'isAdmin' 	  => (($user->row()->is_admin == 1)?true:false),
+					'user_type'   => $user->row()->is_admin,
+					'id' 		  => $user->row()->id,
+					'client_id'   => @$row->client_id,
+					'fullname'	  => $user->row()->fullname,
+					'user_level'  => $user->row()->user_level,
+					'email' 	  => $user->row()->email,
+					'image' 	  => $user->row()->image,
+					'last_login'  => $user->row()->last_login,
+					'last_logout' => $user->row()->last_logout,
+					'ip_address'  => $user->row()->ip_address,
+					'permission'  => json_encode(@$permission), 
+					'label_permission'  => json_encode(@$permission1) 
+					);	
+					$this->session->set_userdata($sData);
+					//update database status
+					$this->user_model->last_login();
+					
+					$this->session->set_flashdata('message', display('welcome_back').' '.$user->row()->fullname);
+					redirect('dashboard/home');
+
+			} else {
+				$this->session->set_flashdata('exception', display('incorrect_email_or_password'));
+				redirect('login');
+			} 
+
+		} else {
+			echo Modules::run('template/login', $data);
+		}
+	}
+
+	public function logout()
 	{ 
-		$data['title']      = display('user_list');
-		$data['module'] 	= "auth";  
-		$data['page']   	= "user/list";   
-		$data['user'] = $this->user_model->read();
-		echo Modules::run('template/main', $data); 
+		//update database status
+		$this->user_model->last_logout();
+		//destroy session
+		$this->session->sess_destroy();
+		redirect('login');
 	}
  
-
     public function email_check($email, $id)
     { 
         $emailExists = $this->db->select('email')
@@ -49,7 +101,6 @@ class User extends MX_Controller {
         }
     } 
 
- 
 	public function form($id = null)
 	{ 
 		$data['title']    = display('add_user');
