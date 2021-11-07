@@ -16,12 +16,12 @@ class Data extends MX_Controller {
 	public function index()
 	{
 		$data=array('module'=>$this->module,'title'=>"Data",
-		            'uptitle'=>"iHRIS Updates Data",'view'=>"data");
+		            'uptitle'=>"Forms and Fields",'view'=>"data");
 	echo Modules::run('templates/main',$data);
 	}
 	public function forms(){
 		$data=array('module'=>$this->module,'title'=>"Forms",
-		            'uptitle'=>"Forms",'view'=>"forms");
+		            'uptitle'=>"Forms",'view'=>"data");
 		
 		$http = new HttpUtil();
 	   
@@ -33,12 +33,31 @@ class Data extends MX_Controller {
 		$headr[] = 'Content-type: application/json';
 	
 		
-		$response = $http->getRequest($endpoint);
-	    foreach($response as $resp){
-			print_r($resp);
+		return $http->getRequest($endpoint);
 		}
+		public function fields($form_id){
+			$data=array('module'=>$this->module,'title'=>"Forms",
+						'uptitle'=>"Forms",'view'=>"forms");
+			
+			$http = new HttpUtil();
+		   
+			$body = array();
+		
+			$endpoint='/data/fields/'.$form_id;
+			$headr = array();
+			$headr[] = 'Content-length:'.strlen(json_encode($body));
+			$headr[] = 'Content-type: application/json';
+		
+			
+			return $response = $http->getRequest($endpoint);
+		}
+		public function fields()
+		[
+		return  $this->data_mdl->get_fields();
+		]
+		
 	
-	}
+	
 
 
 
