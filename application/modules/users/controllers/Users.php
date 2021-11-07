@@ -20,7 +20,7 @@ class Users extends MX_Controller {
 	public function list()
 	{ 
 		$data['title']      = display('user_list');
-		$data['module'] 	= "user";  
+		$data['module'] 	= "users";  
 		$data['page']   	= "list";   
 		$data['user'] = $this->user_model->read();
 		echo Modules::run('template/main', $data); 
@@ -30,10 +30,10 @@ class Users extends MX_Controller {
 	{   
 		 
 		if ($this->session->userdata('isLogIn'))
-		redirect('dashboard');
+		redirect('dashboard/dashboard');
 		$data['title']    = "login"; 
-		$this->form_validation->set_rules('email', display('email'), 'required|valid_email|max_length[100]|trim');
-		$this->form_validation->set_rules('password', display('password'), 'required|max_length[32]|md5|trim');
+		$this->form_validation->set_rules('email', 'Email Required', 'required|valid_email|max_length[100]|trim');
+		$this->form_validation->set_rules('password', 'Password Required', 'required|max_length[32]|md5|trim');
 		#-------------------------------------#
 		$data['user'] = (object)$userData = array(
 			'email' 	 => $this->input->post('email'),
@@ -68,8 +68,8 @@ class Users extends MX_Controller {
 					//update database status
 					$this->user_model->last_login();
 					
-					$this->session->set_flashdata('message', display('welcome_back').' '.$user->row()->fullname);
-					redirect('dashboard');
+					$this->session->set_flashdata('message', 'Welcome Back '.' '.$user->row()->fullname);
+					redirect('dashboard/');
 
 			} else {
 				$this->session->set_flashdata('exception', display('incorrect_email_or_password'));
@@ -108,23 +108,23 @@ class Users extends MX_Controller {
 
 	public function form($id = null)
 	{ 
-		$data['title']    = display('add_user');
+		$data['title']    = "Add_user";
 		/*-----------------------------------*/
-		$this->form_validation->set_rules('firstname', display('firstname'),'required|max_length[50]');
-		$this->form_validation->set_rules('lastname', display('lastname'),'required|max_length[50]');
+		$this->form_validation->set_rules('firstname', "First Name",'required|max_length[50]');
+		$this->form_validation->set_rules('lastname', "Last Name Required",'required|max_length[50]');
 		#------------------------#
 		if (!empty($id)) {   
-       		$this->form_validation->set_rules('email', display('email'), "required|valid_email|max_length[100]");
+       		$this->form_validation->set_rules('email', "Email Required", "required|valid_email|max_length[100]");
        		/*---#callback fn not supported#---*/  
 		} else {
-			$this->form_validation->set_rules('email', display('email'),'required|valid_email|max_length[100]');
+			$this->form_validation->set_rules('email', "Email Required",'required|valid_email|max_length[100]');
 		}
 		#------------------------#
 		if(empty($id)){
-		$this->form_validation->set_rules('password', display('password'),'required|max_length[32]|md5');
+		$this->form_validation->set_rules('password', "Password Required",'required|max_length[32]|md5');
 		}
-		$this->form_validation->set_rules('about', display('about'),'max_length[1000]');
-		$this->form_validation->set_rules('status', display('status'),'required|max_length[1]');
+		$this->form_validation->set_rules('about', "About Required",'max_length[1000]');
+		$this->form_validation->set_rules('status', "Status Required",'required|max_length[1]');
 		/*-----------------------------------*/
         $config['upload_path']          = './assets/img/user/';
         $config['allowed_types']        = 'gif|jpg|png'; 
@@ -151,17 +151,17 @@ class Users extends MX_Controller {
 
 			if (empty($userLevelData['id'])) {
 				if ($this->user_model->create($userLevelData)) {
-					$this->session->set_flashdata('message', display('save_successfully'));
+					$this->session->set_flashdata('message', 'Save_successfully');
 				} else {
-					$this->session->set_flashdata('exception', display('please_try_again'));
+					$this->session->set_flashdata('exception', 'Please_try_again');
 				}
 				redirect("user/form/");
 
 			} else {
 				if ($this->user_model->update($userLevelData)) {
-					$this->session->set_flashdata('message', display('update_successfully'));
+					$this->session->set_flashdata('message', 'update_successfully');
 				} else {
-					$this->session->set_flashdata('exception', display('please_try_again'));
+					$this->session->set_flashdata('exception', 'Please_try_again');
 				}
 
 				redirect("user/form/$id");
@@ -180,9 +180,9 @@ class Users extends MX_Controller {
 	public function delete($id = null)
 	{ 
 		if ($this->user_model->delete($id)) {
-			$this->session->set_flashdata('message', display('delete_successfully'));
+			$this->session->set_flashdata('message', 'Delete_successfully');
 		} else {
-			$this->session->set_flashdata('exception', display('please_try_again'));
+			$this->session->set_flashdata('exception', 'Please_try_again');
 		}
 
 		redirect("user/index");
