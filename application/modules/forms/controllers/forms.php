@@ -8,15 +8,15 @@ class Forms extends MX_Controller {
 	
 	public  function __construct(){
 		parent:: __construct();
-		$this->module="data";
+		$this->module="forms";
 		$this->load->model("Forms_mdl",'forms_mdl');
 
 	}
 
 	public function index()
 	{
-		$data=array('module'=>$this->module,'title'=>"Data",
-		            'uptitle'=>"Forms and Fields",'view'=>"data");
+		$data=array('module'=>$this->module,'title'=>"Forms",
+		            'uptitle'=>"Forms and Fields",'view'=>"forms");
 	echo Modules::run('templates/main',$data);
 	}
 	public function forms(){

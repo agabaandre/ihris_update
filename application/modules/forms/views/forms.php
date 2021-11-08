@@ -5,6 +5,9 @@
                         <i class="icon icon-wpforms light-green-text s-18"></i>
                         <strong> Forms </strong>
                     </div>
+                    <div style="float:right !imporntant; margin-left:3px;">
+                        <button type="button" class="btn btn-success btn-lg r-20"><i class="icon-plus_one"></i>Add</button>
+                    </div>
                     <div class="slimScrollDiv" style="position: relative; overflow: auto; width: auto; height: 500px;">
                         <div class="table-responsive">
                             <table class="table table-hover table-striped">
@@ -18,7 +21,7 @@
                                     <th>Parent</th>
                                    
                                 </tr>
-                                <?php  $forms=Modules::run('data/forms'); ?>
+                                <?php  $forms=Modules::run('forms/forms'); ?>
                                 <tr>
                                     
                                     <?php foreach($forms as $form):
@@ -54,6 +57,9 @@
                         <i class="icon-clipboard-edit blue-text"></i>
                         <strong> Fields </strong>
                     </div>
+                    <div style="float:right !imporntant; margin-left:3px;">
+                        <button type="button" class="btn btn-success btn-lg r-20"><i class="icon-plus_one"></i>Add</button>
+                    </div>
                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: auto;">
                         <div class="table-responsive">
                             <table class="table table-hover table-striped">
@@ -75,10 +81,9 @@
 
                         
 
-                                <?php  $fields=Modules::run('data/fields'); 
+                                <?php  $fields=Modules::run('forms/fields'); 
                                  foreach($fields as $field):
-                                   // print_r($field);
-                                
+                                 
                                 ?>
                                 
                                 <tr>
