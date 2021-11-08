@@ -24,10 +24,13 @@ class Data extends MX_Controller {
 	}
 
 	public function filters(){
+		$filter = array();
 		$filters=$this->input->post();
+		if(!empty($filters)){
 		foreach($filters as $key=>$value):
 			$filter[]="AND ".$key."=". "$value"; 
-		endforeach:
+		endforeach;
+	     }
 
 	return $filter;
 	}
