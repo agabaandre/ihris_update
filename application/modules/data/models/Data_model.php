@@ -13,6 +13,11 @@ class Data_model extends CI_Model {
 		$this->db->query("SELECT * FROM `records` where mobile_number!='' $filters");
 	
 	}
+	public function headers()
+	{ 
+	return $this->db->get('fields')->result();
+	
+	}
 
 	
 

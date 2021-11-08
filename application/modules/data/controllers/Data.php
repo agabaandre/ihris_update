@@ -15,14 +15,26 @@ class Data extends MX_Controller {
 
 	public function index()
 	{ 
-		$data['uptitle']      = 'User List';
+		$data['uptitle']      = 'Activity Report';
+		$data['title']      = 'Activity Report';
 		$data['module'] 	= "data";  
 		$data['view']   	= "data";   
+		$data['headers']   	= $this->data_model->getData();
+		$filters=$this->filters();
+		$data['staffs'] = $this->data_model->getData();
+		echo Modules::run('templates/main', $data); 
+	}
+
+	public function kyc()
+	{ 
+		$data['uptitle']      = 'KYC Verified Health Workers';
+		$data['title']      = 'KYC Verified Health Workers';
+		$data['module'] 	= "data";  
+		$data['view']   	= "kyc";   
 		$filters=$this->filters();
 		$data['user'] = $this->data_model->getData($filters);
 		echo Modules::run('templates/main', $data); 
 	}
-
 	public function filters(){
 		$filter = array();
 		$filters=$this->input->post();

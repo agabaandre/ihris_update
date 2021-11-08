@@ -24,7 +24,13 @@
     <meta name="theme-color" content="#ffffff">
     <title>iHRIS Update<?php echo " ".$title; ?></title>
     <!-- CSS -->
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/app.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <style>
         .loader {
             position: fixed;
@@ -36,6 +42,9 @@
             z-index: 9998;
             text-align: center;
         }
+.dt-buttons{
+    float:right !important;
+}
         
 .form__group {
   position: relative;

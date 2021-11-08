@@ -15,7 +15,7 @@
                 <ul class="treeview-menu">
                     <li><a href="<?php echo base_url()?>data"><i class="icon icon-circle-o"></i>Field Data</a>
                     </li>
-                    <li><a href="<?php echo base_url()?>sessions"><i class="icon icon-add"></i>Activity Sessions</a>
+                    <li><a href="<?php echo base_url()?>data/kyc"><i class="icon icon-add"></i>KYC verified</a>
                     </li>
                 </ul>
             </li>
