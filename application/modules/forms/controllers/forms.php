@@ -3,13 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 use \utils\HttpUtil;
 
-class Data extends MX_Controller {
+class Forms extends MX_Controller {
 
 	
 	public  function __construct(){
 		parent:: __construct();
 		$this->module="data";
-		$this->load->model("Data_mdl",'data_mdl');
+		$this->load->model("Forms_mdl",'forms_mdl');
 
 	}
 
@@ -27,7 +27,7 @@ class Data extends MX_Controller {
 	   
 		$body = array();
 	
-		$endpoint='/data/forms';
+		$endpoint='data/forms';
 		$headr = array();
 		$headr[] = 'Content-length:'.strlen(json_encode($body));
 		$headr[] = 'Content-type: application/json';
@@ -35,7 +35,7 @@ class Data extends MX_Controller {
 		
 		return $http->getRequest($endpoint);
 		}
-		public function fields($form_id){
+		public function fields(){
 			$data=array('module'=>$this->module,'title'=>"Forms",
 						'uptitle'=>"Forms",'view'=>"forms");
 			
@@ -43,7 +43,7 @@ class Data extends MX_Controller {
 		   
 			$body = array();
 		
-			$endpoint='/data/fields/'.$form_id;
+			$endpoint='data/fields';
 			$headr = array();
 			$headr[] = 'Content-length:'.strlen(json_encode($body));
 			$headr[] = 'Content-type: application/json';
@@ -51,15 +51,6 @@ class Data extends MX_Controller {
 			
 			return $response = $http->getRequest($endpoint);
 		}
-		public function fields()
-		[
-		return  $this->data_mdl->get_fields();
-		]
-		
 	
-	
-
-
-
 
 }

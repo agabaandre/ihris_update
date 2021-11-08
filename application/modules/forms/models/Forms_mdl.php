@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Data_mdl extends CI_Model {
+class Forms_mdl extends CI_Model {
 
 	
 	public function __Construct(){
@@ -13,5 +13,6 @@ class Data_mdl extends CI_Model {
       $this->db->get('data');
    return $data;
    }
+  
 
 }

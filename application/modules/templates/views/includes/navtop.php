@@ -23,7 +23,7 @@
             
                 <!-- Notifications -->
                 <li class="dropdown custom-dropdown notifications-menu">
-                    <a href="#" class="nav-link  b-r b-l pl-lg-3 pr-lg-3 btn btn-sm btn-primary" data-toggle="dropdown" aria-expanded="false" style="background">
+                    <a href="#" class="btn btn-md btn-primary" data-toggle="dropdown" aria-expanded="false" style="background">
                         <i class="icon-user "><?php echo $this->session->userdata('fullname');?></i>
                         <!-- <span class="badge badge-danger badge-mini rounded-circle">4</span> -->
                     </a>

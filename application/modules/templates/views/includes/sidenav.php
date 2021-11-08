@@ -25,10 +25,9 @@
                 <span class="badge r-3 badge-primary pull-right"></span>
             </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?php echo base_url()?>/data/forms"><i class="icon icon-circle-o"></i>Forms</a>
+                    <li><a href="<?php echo base_url()?>forms/"><i class="icon icon-circle-o"></i>Forms & Fields</a>
                     </li>
-                    <li><a href="<?php echo base_url()?>/data/fields"><i class="icon icon-add"></i>Fields</a>
-                    </li>
+                   
                 </ul>
             </li>
             <li class="treeview"><a href="#"><i class="icon icon-account_box s-24"></i>Users<i
