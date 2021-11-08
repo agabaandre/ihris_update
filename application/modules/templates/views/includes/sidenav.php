@@ -10,7 +10,7 @@
             <li class="treeview"><a href="#">
                 <i class="icon icon icon-package s-24"></i>
                 <span>Data and Sessions</span>
-                <span class="badge r-3 badge-primary pull-right"><?php echo $records ?></span>
+                <span class="badge r-3 badge-primary pull-right"></span>
             </a>
                 <ul class="treeview-menu">
                     <li><a href="<?php echo base_url()?>data"><i class="icon icon-circle-o"></i>Field Data</a>
@@ -33,9 +33,9 @@
             <li class="treeview"><a href="#"><i class="icon icon-account_box s-24"></i>Users<i
                     class=" icon-angle-left  pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="<?php echo base_url('users')?>"><i class="icon icon-circle-o"></i>All Users</a>
+                    <li><a href="<?php echo base_url('users/list')?>"><i class="icon icon-circle-o"></i>All Users</a>
                     </li>
-                    <li><a href="<?php echo base_url()?>add_users"><i class="icon icon-add"></i>Add User</a>
+                    <li><a href="<?php echo base_url()?>users/form"><i class="icon icon-add"></i>Add User</a>
                     </li>
                   
                 </ul>

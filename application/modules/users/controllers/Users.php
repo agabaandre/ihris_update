@@ -19,9 +19,9 @@ class Users extends MX_Controller {
 
 	public function list()
 	{ 
-		$data['title']      = 'User List';
+		$data['uptitle']      = 'User List';
 		$data['module'] 	= "users";  
-		$data['page']   	= "list";   
+		$data['view']   	= "list";   
 		$data['user'] = $this->user_model->read();
 		echo Modules::run('templates/main', $data); 
 	}
@@ -109,6 +109,7 @@ class Users extends MX_Controller {
 	public function form($id = null)
 	{ 
 		$data['title']    = "Add_user";
+		$data['uptitle']    = "Add user";
 		/*-----------------------------------*/
 		$this->form_validation->set_rules('firstname', "First Name",'required|max_length[50]');
 		$this->form_validation->set_rules('lastname', "Last Name Required",'required|max_length[50]');
@@ -155,7 +156,7 @@ class Users extends MX_Controller {
 				} else {
 					$this->session->set_flashdata('exception', 'Please_try_again');
 				}
-				redirect("user/form/");
+				redirect("users/form/");
 
 			} else {
 				if ($this->user_model->update($userLevelData)) {
@@ -164,16 +165,16 @@ class Users extends MX_Controller {
 					$this->session->set_flashdata('exception', 'Please_try_again');
 				}
 
-				redirect("user/form/$id");
+				redirect("users/form/$id");
 			}
 
 
 		} else {
-			$data['module'] = "dashboard";  
-			$data['page']   = "user/form"; 
+			$data['module'] = "users";  
+			$data['view']   = "form"; 
 			if(!empty($id))
 			$data['user']   = $this->user_model->single($id);
-			echo Modules::run('template/main', $data);
+			echo Modules::run('templates/main', $data);
 		}
 	}
 
@@ -185,7 +186,7 @@ class Users extends MX_Controller {
 			$this->session->set_flashdata('exception', 'Please_try_again');
 		}
 
-		redirect("user/index");
+		redirect("users/index");
 	}
 
 
