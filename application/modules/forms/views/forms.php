@@ -5,8 +5,12 @@
                         <i class="icon icon-wpforms light-green-text s-18"></i>
                         <strong> Forms </strong>
                     </div>
-                    <div style="float:right !imporntant; margin-left:3px;">
-                        <button type="button" class="btn btn-success btn-lg r-20"><i class="icon-plus_one"></i>Add</button>
+                
+                    <form method="post" action="">   
+                    <div class="card-footer white"> 
+                      <button  class="btn btn-primary btn-xs">Save Data</button>
+                      <button type="button" class="btn btn-success btn-xs"><i class="icon-plus_one"></i>Add</button>
+               
                     </div>
                     <div class="slimScrollDiv" style="position: relative; overflow: auto; width: auto; height: 500px;">
                         <div class="table-responsive">
@@ -28,7 +32,7 @@
                                        // print_r($form);
                                         ?>
 
-                                      <td><input type="text" class="form__field" name="id" value="<?php echo $form['id'];?>"></td>
+                                      <td><input type="text" class="form__field" name="id" value="<?php echo $form['id'];?>" readonly></td>
                                       <td><input type="text" class="form__field" name="id" value="<?php echo $form['form_title'];?>"></td>
                                       <td><input type="text" class="form__field" name="id" value="<?php echo $form['description'];?>"></td>
                                       <td><input type="text" class="form__field" name="id" value="<?php echo $form['parent_form'];?>""></td>
@@ -40,6 +44,7 @@
                                
                                 </tbody>
                             </table>
+                        </form>
                       
                     </div><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.95); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 259.366px;"></div><div class="slimScrollRail" style="width: 5px; height: 300%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
                     <div class="card-footer white">
@@ -51,21 +56,24 @@
 
             <div class="col-md-12">
                 <div class="card ">
-                <div class="card-body">
                 <div class="card my-12 shadow no-b r-0">
                     <div class="card-header white">
                         <i class="icon-clipboard-edit blue-text"></i>
                         <strong> Fields </strong>
                     </div>
-                    <div style="float:right !imporntant; margin-left:3px;">
-                        <button type="button" class="btn btn-success btn-lg r-20"><i class="icon-plus_one"></i>Add</button>
+                    <form id="form_advanced_validation" class="form-material" method="POST" novalidate="novalidate">
+
+                    <div class="card-footer white"> 
+                      <button  class="btn btn-primary btn-xs">Save Data</button>
+                      <button type="button" class="btn btn-success btn-xs"><i class="icon-plus_one"></i>Add</button>
+               
                     </div>
-                    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: auto;">
+                    <div class="slimScrollDiv" style="position: relative; overflow: auto; width: auto; height: 600px;">
                         <div class="table-responsive">
                             <table class="table table-hover table-striped">
                                 <!-- Table heading -->
                                 <tbody>
-                                <tr class="no-b">
+                                <tr>
                                    
                                     <th>#</th>
                                     <th>Form id</th>
@@ -77,8 +85,7 @@
                                     <th>Description</th>
                                 </tr>
                             <div class="card my-3 shadow no-b r-0">
-                            <form id="form_advanced_validation" class="form-material" method="POST" novalidate="novalidate">
-
+                           
                         
 
                                 <?php  $fields=Modules::run('forms/fields'); 
@@ -111,9 +118,7 @@
                     </div>
                    
                     </div><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.95); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 259.366px;"></div><div class="slimScrollRail" style="width: 5px; height: 300%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
-                    <div class="card-footer white">
-                        
-                    </div>
+                   
                 </div>
     </div>
 </div>

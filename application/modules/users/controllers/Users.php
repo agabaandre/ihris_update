@@ -19,11 +19,11 @@ class Users extends MX_Controller {
 
 	public function list()
 	{ 
-		$data['title']      = display('user_list');
+		$data['title']      = 'User List';
 		$data['module'] 	= "users";  
 		$data['page']   	= "list";   
 		$data['user'] = $this->user_model->read();
-		echo Modules::run('template/main', $data); 
+		echo Modules::run('templates/main', $data); 
 	}
 
 	public function login()

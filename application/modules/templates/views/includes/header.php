@@ -85,11 +85,53 @@ label,
   border-bottom: 2px solid #009788;
 }
 
-        .plane-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-        }
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 0.5em;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: #d2d4dc; 
+  height:70%;
+	border: 1px solid #555555;
+  border-radius:4px;
+}
+
+.slimScrollDiv::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+       box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
+	background-color: #F5F5F5;
+}
+
+.slimScrollDiv::-webkit-scrollbar
+{
+	width: 0.5em;
+	background-color: #F5F5F5 !important;
+}
+
+.slimScrollDiv::-webkit-scrollbar-thumb
+{
+	background-color: #d2d4dc; 
+	border: 1px solid #555555 !important;
+  border-radius:4px;
+}
+
+.plane-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
     </style>
     <script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
 </head>
