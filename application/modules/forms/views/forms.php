@@ -6,10 +6,10 @@
                         <strong> Forms </strong>
                     </div>
                 
-                    <form method="post" action="">   
+                    <form method="post" action="<?php echo base_url()?>forms/updateforms">   
                     <div class="card-footer white"> 
-                      <button  class="btn btn-primary btn-xs">Save Data</button>
-                      <button type="button" class="btn btn-success btn-xs"><i class="icon-plus_one"></i>Add</button>
+                      <button  type="submit" class="btn btn-primary btn-md">Save Data</button>
+                      <button type="button" class="btn btn-success btn-md"><i class="icon-plus_one"></i>Add</button>
                
                     </div>
                     <div class="slimScrollDiv" style="position: relative; overflow: auto; width: auto; height: 500px;">
@@ -61,11 +61,11 @@
                         <i class="icon-clipboard-edit blue-text"></i>
                         <strong> Fields </strong>
                     </div>
-                    <form id="form_advanced_validation" class="form-material" method="POST" novalidate="novalidate">
+                    <form id="form_advanced_validation" method="<?php echo base_url()?>forms/updatefields" class="form-material" method="POST" novalidate="novalidate">
 
                     <div class="card-footer white"> 
-                      <button  class="btn btn-primary btn-xs">Save Data</button>
-                      <button type="button" class="btn btn-success btn-xs"><i class="icon-plus_one"></i>Add</button>
+                      <button  class="btn btn-primary btn-md">Save Data</button>
+                      <button type="button" class="btn btn-success btn-md"><i class="icon-plus_one"></i>Add</button>
                
                     </div>
                     <div class="slimScrollDiv" style="position: relative; overflow: auto; width: auto; height: 600px;">

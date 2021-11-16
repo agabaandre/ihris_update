@@ -10,8 +10,17 @@ class Data_model extends CI_Model {
 		if(empty($filters)){
 			$filters="";
 		}
-		$this->db->query("SELECT * FROM `records` where mobile_number!='' $filters");
+		$query=$this->db->query("SELECT * FROM `records` where mobile_number!='' $filters");
+	return $query->result();
 	
+	}
+	public function kycData($filters)
+	{ 
+		if(empty($filters)){
+			$filters="";
+		}
+		$query=$this->db->query("SELECT * from records where kyc_verification='yes'");
+	return $query->result();
 	}
 	public function headers()
 	{ 

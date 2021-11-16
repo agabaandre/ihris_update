@@ -3,7 +3,9 @@
                             <h6><?php echo  $title; ?></h6>
                         </div>
                         <div class="card-body">
-                <?php echo form_open_multipart("dashboard/user/form/$user->id") ?>
+                            <?php if(!empty($this->session->flashdata('message'))){?>
+                        <div role="alert" class="alert alert-success"><?php echo $this->session->flashdata('message');?></div><?php } ?>
+                <?php echo form_open_multipart("users/form/$user->id") ?>
                     
                     <?php echo form_hidden('id',$user->id) ?>
                     <div class="form-group row">

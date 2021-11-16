@@ -19,20 +19,21 @@ class Data extends MX_Controller {
 		$data['title']      = 'Activity Report';
 		$data['module'] 	= "data";  
 		$data['view']   	= "data";   
-		$data['headers']   	= $this->data_model->getData();
+		$data['headers']   	= $this->data_model->headers();
 		$filters=$this->filters();
-		$data['staffs'] = $this->data_model->getData();
+		$data['staffs'] = $this->data_model->getData($filters);
 		echo Modules::run('templates/main', $data); 
 	}
 
 	public function kyc()
 	{ 
-		$data['uptitle']      = 'KYC Verified Health Workers';
-		$data['title']      = 'KYC Verified Health Workers';
+		$data['uptitle']      = 'KYC Verified Data';
+		$data['title']      = 'KYC Verified Data ';
 		$data['module'] 	= "data";  
 		$data['view']   	= "kyc";   
+		$data['headers']   	= $this->data_model->headers();
 		$filters=$this->filters();
-		$data['user'] = $this->data_model->getData($filters);
+		$data['staffs'] = $this->data_model->kycData($filters);
 		echo Modules::run('templates/main', $data); 
 	}
 	public function filters(){
