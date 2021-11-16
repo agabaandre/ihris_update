@@ -17,7 +17,7 @@ class Users extends MX_Controller {
 		$this->load->view('login');
 	 }
 
-	public function list()
+	public function userlist()
 	{ 
 		$data['uptitle']      = 'User List';
 		$data['module'] 	= "users";  
