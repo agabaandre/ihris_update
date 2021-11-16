@@ -1,40 +1,57 @@
 <div class="row mb-5">
-            <div class="col-md-8">
-                <div class="pt-2 pb-lg-5 relative">
-                    <h3>
-                        Workplace Overview
-                    </h3>
-                    <strong>Current Job Summary</strong>
+      
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-3">
+                                         <span class="easy-pie-chart" data-percent="55"
+                                               data-options='{"lineWidth": 10, "barColor": "#7dc855"}'>
+                                    <span class="percent">55%</span>
+                                     </span>
+                            </div>
+                            <div>
+                                <h6> Your Progress <br>
+                                    <small>Where you stand in project</small>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="icon icon-schedule text-yellow"></i>Design New Layout
+                            <div class="float-right">
+                                <span class="badge badge-warning">Incomplete</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 my-3">
-                        <div class="d-flex">
-                            <img class="mr-3  r-3" src="assets/img/demo/portfolio/p8.jpg"
-                                 alt="Generic placeholder image" width="50" height="50">
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-3">
+                                         <span class="easy-pie-chart" data-percent="55"
+                                               data-options='{"lineWidth": 10, "barColor": "#7dc855"}'>
+                                    <span class="percent">55%</span>
+                                     </span>
+                            </div>
                             <div>
-                                <h6 class="mt-0 mb-1">Project Name</h6>
-                                <div class="mt-1 text-dark-heading">Food Application Development</div>
+                                <h6> Your Progress <br>
+                                    <small>Where you stand in project</small>
+                                </h6>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 my-3">
-                        <div class="d-flex">
-                            <img class="mr-3 r-3" src="assets/img/dummy/bootstrap.png" alt="" width="50" height="50">
-                            <div>
-                                <h6 class="mt-0 mb-1">Company</h6>
-                                <h5 class="mt-1 text-dark-heading">Bootstrap Paper Co</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="icon icon-schedule text-yellow"></i>Design New Layout
+                            <div class="float-right">
+                                <span class="badge badge-warning">Incomplete</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 my-3">
-                        <div class="d-flex">
-                            <img class="mr-3 r-3 circle" src="assets/img/dummy/u12.png" alt="" width="50" height="50">
-                            <div>
-                                <h6 class="mt-0 mb-1">Team Leader</h6>
-                                <div class="mt-1 text-dark-heading">Salman Khan</div>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-4">
@@ -211,4 +228,4 @@
                     </li>
                 </ul>
             </div>
-        </div>
+</div>

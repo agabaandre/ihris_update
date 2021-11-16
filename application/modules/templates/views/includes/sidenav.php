@@ -2,7 +2,7 @@
 <aside class="main-sidebar fixed offcanvas b-r" data-toggle='offcanvas'>
     <section class="sidebar">
         <ul class="sidebar-menu mt-4">
-            <li class="treeview"><a href="#">
+            <li class="treeview"><a href="<?php echo base_url()?>dashboard">
                 <i class="icon icon-sailing-boat-water s-24"></i> <span>Dashboard</span> <i
                     class=" icon-angle-left  pull-right"></i>
             </a>
