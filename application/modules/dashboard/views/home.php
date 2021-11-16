@@ -33,7 +33,7 @@
                         <div class="d-flex align-items-center">
                             <div class="mr-3">
                                          <span class="easy-pie-chart" data-percent="100"
-                                               data-options='{"lineWidth": 10, "barColor": "#7dc855"}'>
+                                               data-options='{"lineWidth": 10, "barColor": "#ed5564"}'>
                                     <span class="percent"><?php echo $count_synronised;?></span>
                                      </span>
                             </div>
@@ -89,15 +89,7 @@
                         <div>
                             <h4>Design Phase</h4>
                             <div class="avatar-group mt-3">
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u4.png" alt=""></figure>
-                                <figure class="avatar">
-                                    <span class="avatar-letter avatar-letter-l circle"></span>
-                                </figure>
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u5.png" alt=""></figure>
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u6.png" alt=""></figure>
+                          
                             </div>
                         </div>
                         <div class="ml-auto mt-sm-3">
@@ -135,13 +127,7 @@
                         <div>
                             <h4>Project Development</h4>
                             <div class="avatar-group mt-3">
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u5.png" alt=""></figure>
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u6.png" alt=""></figure>
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u7.png" alt="">
-                                </figure>
+                            
                             </div>
                         </div>
                         <div class="ml-auto">
@@ -179,24 +165,7 @@
                         <div>
                             <h4>Testing Phase</h4>
                             <div class="avatar-group mt-3">
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u4.png" alt=""></figure>
-                                <figure class="avatar">
-                                    <span class="avatar-letter avatar-letter-l circle"></span>
-                                </figure>
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u5.png" alt=""></figure>
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u6.png" alt=""></figure>
-                                <figure class="avatar">
-                                    <img src="assets/img/dummy/u7.png" alt="">
-                                </figure>
-                                <figure class="avatar">
-                                    <span class="avatar-letter avatar-letter-a circle"></span>
-                                </figure>
-                                <figure class="avatar">
-                                    <span class="avatar-letter avatar-letter-b circle"></span>
-                                </figure>
+                            
                             </div>
                         </div>
                         <div class="ml-auto mt-sm-3">
