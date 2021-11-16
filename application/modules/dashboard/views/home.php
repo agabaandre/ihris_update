@@ -5,25 +5,25 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="mr-3">
-                                         <span class="easy-pie-chart" data-percent="55"
+                                         <span class="easy-pie-chart" data-percent="100"
                                                data-options='{"lineWidth": 10, "barColor": "#7dc855"}'>
-                                    <span class="percent">55%</span>
+                                    <span class="percent">100%</span>
                                      </span>
                             </div>
                             <div>
-                                <h6> Your Progress <br>
-                                    <small>Where you stand in project</small>
+                                <h6> Progress <br>
+                                    <small>Commnunity Health Workers</small>
                                 </h6>
                             </div>
                         </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
+                        <!-- <li class="list-group-item">
                             <i class="icon icon-schedule text-yellow"></i>Design New Layout
                             <div class="float-right">
                                 <span class="badge badge-warning">Incomplete</span>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -32,26 +32,26 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="mr-3">
-                                         <span class="easy-pie-chart" data-percent="55"
+                                         <span class="easy-pie-chart" data-percent="100"
                                                data-options='{"lineWidth": 10, "barColor": "#7dc855"}'>
-                                    <span class="percent">55%</span>
+                                    <span class="percent"><?php echo $count_synronised;?></span>
                                      </span>
                             </div>
                             <div>
-                                <h6> Your Progress <br>
-                                    <small>Where you stand in project</small>
+                                <h6> Syncronised Records <br>
+                                    <small>Update Actvity Records</small>
                                 </h6>
                             </div>
                         </div>
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <!-- <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <i class="icon icon-schedule text-yellow"></i>Design New Layout
                             <div class="float-right">
                                 <span class="badge badge-warning">Incomplete</span>
                             </div>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <div class="col-md-4">
@@ -59,26 +59,26 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="mr-3">
-                                         <span class="easy-pie-chart" data-percent="55"
+                                         <span class="easy-pie-chart" data-percent="70"
                                                data-options='{"lineWidth": 10, "barColor": "#7dc855"}'>
-                                    <span class="percent">55%</span>
+                                    <span class="percent">70%</span>
                                      </span>
                             </div>
                             <div>
-                                <h6> Your Progress <br>
-                                    <small>Where you stand in project</small>
+                                <h6> Progress <br>
+                                    <small>Ministry Health Worker</small>
                                 </h6>
                             </div>
                         </div>
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <!-- <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <i class="icon icon-schedule text-yellow"></i>Design New Layout
                             <div class="float-right">
                                 <span class="badge badge-warning">Incomplete</span>
                             </div>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
