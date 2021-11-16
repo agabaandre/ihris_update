@@ -127,7 +127,7 @@
                             </div>
                         </div>
                         <div class="ml-auto">
-                                         <span class="easy-pie-chart " data-percent="55"
+                                         <span class="easy-pie-chart " data-percent="100"
                                                data-options='{"lineWidth": 10, "barColor": "#03a9f4","trackColor":"#f6f8fb"}'>
                                     <span class="percent s-24"><?php echo @$chw_records; ?></span>
                                      </span>
@@ -159,7 +159,7 @@
                             </div>
                         </div>
                         <div class="ml-auto mt-sm-3">
-                                         <span class="easy-pie-chart " data-percent="55"
+                                         <span class="easy-pie-chart " data-percent="100"
                                                data-options='{"lineWidth": 10, "barColor": "#03a9f4","trackColor":"#f6f8fb"}'>
                                     <span class="percent s-24"><?php echo @$qualify_records; ?></span>
                                      </span>

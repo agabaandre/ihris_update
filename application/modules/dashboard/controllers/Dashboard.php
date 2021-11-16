@@ -14,7 +14,9 @@ class Dashboard extends MX_Controller {
 	public function index()
 	{   $count_synronised = $this->dashdata();
 		$data=array('module'=>$this->module,'title'=>"Main Dashboard",
-		            'uptitle'=>"Main Dashboard",'view'=>"home",'count_synronised'=>$count_synronised);
+		            'uptitle'=>"Main Dashboard",'view'=>"home",'manage_records'=>5835,
+					'qualify_records'=>2000,'chw_records'=>3000,
+					'count_synronised'=>$count_synronised,);
 	echo Modules::run('templates/main',$data);
 	}
 	public function dashdata(){
