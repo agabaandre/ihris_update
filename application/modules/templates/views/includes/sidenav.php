@@ -9,7 +9,7 @@
             </li>
             <li class="treeview"><a href="#">
                 <i class="icon icon icon-package s-24"></i>
-                <span>Data and Sessions</span>
+                <span>Data</span>
                 <span class="badge r-3 badge-primary pull-right"></span>
             </a>
                 <ul class="treeview-menu">
