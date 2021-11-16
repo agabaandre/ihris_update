@@ -33,7 +33,7 @@
             <li class="treeview"><a href="#"><i class="icon icon-account_box s-24"></i>Users<i
                     class=" icon-angle-left  pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="<?php echo base_url('users/list')?>"><i class="icon icon-circle-o"></i>All Users</a>
+                    <li><a href="<?php echo base_url('users/userlist')?>"><i class="icon icon-circle-o"></i>All Users</a>
                     </li>
                     <li><a href="<?php echo base_url()?>users/form"><i class="icon icon-add"></i>Add User</a>
                     </li>
