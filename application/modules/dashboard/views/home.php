@@ -87,38 +87,34 @@
                 <div class="card-body pl-5 pr-5 pt-5">
                     <div class="d-lg-flex align-items-center">
                         <div>
-                            <h4>Design Phase</h4>
+                            <h4>iHRIS Manage</h4>
                             <div class="avatar-group mt-3">
                           
                             </div>
                         </div>
                         <div class="ml-auto mt-sm-3">
-                                         <span class="easy-pie-chart " data-percent="90"
+                                         <span class="easy-pie-chart " data-percent="100"
                                                data-options='{"lineWidth": 10, "barColor": "#03a9f4","trackColor":"#f6f8fb"}'>
-                                    <span class="percent s-24">4/5</span>
+                                    <span class="percent s-24"><?php echo @$manage_records; ?></span>
                                      </span>
                         </div>
                     </div>
                 </div>
                 <ul class="list-group list-group-flush">
+
                     <li class="list-group-item">
-                        <i class="icon icon-schedule text-yellow"></i>Design New Layout
+                        <i class="icon icon-check-circle text-success"></i>Last Sync
                         <div class="float-right">
-                            <span class="badge badge-warning">Incomplete</span>
+                            <span class="badge badge-success">Incomplete</span>
                         </div>
                     </li>
                     <li class="list-group-item">
-                        <i class="icon icon-check-circle text-success"></i>Design New Layout
-                        <div class="float-right">
-                            <span class="badge badge-success">Completed</span>
-                        </div>
+                      
                     </li>
                     <li class="list-group-item">
-                        <i class="icon icon-schedule text-yellow"></i>Design New Layout
-                        <div class="float-right">
-                            <span class="badge badge-warning">Incomplete</span>
-                        </div>
+                      
                     </li>
+                    
                 </ul>
             </div>
             <div class="card ">
@@ -140,7 +136,7 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <i class="icon icon-schedule text-yellow"></i>Test Software
+                        <i class="icon icon-schedule text-yellow"></i>Commnunity Health workers Registry
                         <div class="float-right">
                             <span class="badge badge-danger">Bugs</span>
                         </div>
@@ -178,7 +174,7 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <i class="icon icon-schedule text-yellow"></i>Design New Layout
+                        <i class="icon icon-schedule text-yellow"></i>iHRIS QUALIFY
                         <div class="float-right">
                             <span class="badge badge-warning">Incomplete</span>
                         </div>
