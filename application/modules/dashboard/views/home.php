@@ -94,7 +94,7 @@
                         </div>
                         <div class="ml-auto mt-sm-3">
                                          <span class="easy-pie-chart " data-percent="100"
-                                               data-options='{"lineWidth": 10, "barColor": "#03a9f4","trackColor":"#f6f8fb"}'>
+                                               data-options='{"lineWidth": 10, "barColor": "#7dc855","trackColor":"#f6f8fb"}'>
                                     <span class="percent s-24"><?php echo @$manage_records; ?></span>
                                      </span>
                         </div>
@@ -105,7 +105,7 @@
                     <li class="list-group-item">
                         <i class="icon icon-check-circle text-success"></i>Last Sync
                         <div class="float-right">
-                            <span class="badge badge-success">Incomplete</span>
+                            <span class="badge badge-success">Completed</span>
                         </div>
                     </li>
                     <li class="list-group-item">
@@ -121,7 +121,7 @@
                 <div class="card-body p-5">
                     <div class="d-lg-flex align-items-center">
                         <div>
-                            <h4>Project Development</h4>
+                            <h4>Community Health Workers Registry</h4>
                             <div class="avatar-group mt-3">
                             
                             </div>
@@ -129,29 +129,23 @@
                         <div class="ml-auto">
                                          <span class="easy-pie-chart " data-percent="55"
                                                data-options='{"lineWidth": 10, "barColor": "#03a9f4","trackColor":"#f6f8fb"}'>
-                                    <span class="percent s-24">2/5</span>
+                                    <span class="percent s-24"><?php echo @$chw_records; ?></span>
                                      </span>
                         </div>
                     </div>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <i class="icon icon-schedule text-yellow"></i>Commnunity Health workers Registry
-                        <div class="float-right">
-                            <span class="badge badge-danger">Bugs</span>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <i class="icon icon-check-circle text-success"></i>Design New Layout
+                <li class="list-group-item">
+                        <i class="icon icon-check-circle text-success"></i>Last Sync
                         <div class="float-right">
                             <span class="badge badge-success">Completed</span>
                         </div>
                     </li>
                     <li class="list-group-item">
-                        <i class="icon icon-schedule text-yellow"></i>Design New Layout
-                        <div class="float-right">
-                            <span class="badge badge-warning">Incomplete</span>
-                        </div>
+                      
+                    </li>
+                    <li class="list-group-item">
+                      
                     </li>
                 </ul>
             </div>
@@ -159,7 +153,7 @@
                 <div class="card-body p-5">
                     <div class="d-lg-flex align-items-center">
                         <div>
-                            <h4>Testing Phase</h4>
+                            <h4>iHRIS Qualify</h4>
                             <div class="avatar-group mt-3">
                             
                             </div>
@@ -167,30 +161,24 @@
                         <div class="ml-auto mt-sm-3">
                                          <span class="easy-pie-chart " data-percent="55"
                                                data-options='{"lineWidth": 10, "barColor": "#03a9f4","trackColor":"#f6f8fb"}'>
-                                    <span class="percent s-24">2/5</span>
+                                    <span class="percent s-24"><?php echo @$qualify_records; ?></span>
                                      </span>
                         </div>
                     </div>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <i class="icon icon-schedule text-yellow"></i>iHRIS QUALIFY
-                        <div class="float-right">
-                            <span class="badge badge-warning">Incomplete</span>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <i class="icon icon-check-circle text-success"></i>Design New Layout
+                <li class="list-group-item">
+                        <i class="icon icon-check-circle text-success"></i>Last Sync
                         <div class="float-right">
                             <span class="badge badge-success">Completed</span>
                         </div>
                     </li>
                     <li class="list-group-item">
-                        <i class="icon icon-developer_board text-primary"></i>Design New Layout
-                        <div class="float-right">
-                            <span class="badge badge-primary">Delivered</span>
-                        </div>
+                      
                     </li>
-                </ul>
+                    <li class="list-group-item">
+                      
+                    </li>              
+                  </ul>
             </div>
 </div>
