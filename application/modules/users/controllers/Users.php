@@ -12,10 +12,10 @@ class Users extends MX_Controller {
  		));
 	}
 
-	public function index()
-	{ 
-		$this->load->view('login');
-	}
+	// public function index()
+	// { 
+	// 	$this->load->view('login');
+	// }
 
 	public function list()
 	{ 
