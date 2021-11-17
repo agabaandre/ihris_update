@@ -10,7 +10,7 @@ class Data_model extends CI_Model {
 		if(empty($filters)){
 			$filters="";
 		}
-		$query=$this->db->query("SELECT * FROM `records` where mobile_number!='' $filters");
+		$query=$this->db->query("SELECT * FROM `records` where primary_mobile_number!='' $filters");
 	return $query->result();
 	
 	}
