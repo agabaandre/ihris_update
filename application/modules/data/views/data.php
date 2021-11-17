@@ -48,7 +48,8 @@
                          
            </div>
             </td>
-            <td><?php echo $staff->hw_type ?></td>
+            <td><?php echo if ($staff->hw_type=='chw'){ echo "Community Health worker"; } else{ echo "Ministry Health worker"; }  ?></td>
+        
             <td>
               <?php echo $staff->surname; ?>
             </td>
