@@ -54,12 +54,12 @@
             </td>
             <td><?php echo $staff->firstname ?></td>
             <td><?php echo $staff->othername ?></td>
-            <td><?php echo $staff->mobile_number ?></td>
+            <td><?php echo $staff->primary_mobile_number ?></td>
             <td><?php echo $staff->other_contact ?></td>
             <td><?php echo $staff->is_mm_registered ?></td>
             <td><?php echo $staff->is_registered_by_hw ?></td>
             <td><?php echo $staff->registered_mm_name ?></td>
-            <td><?php echo $staff->allow_mm_consent ?></td>
+            <td><?php echo $staff->diff_names_consent ?></td>
             <td><?php echo $staff->kyc_verification ?></td>
             <td><?php echo $staff->birth_date ?></td>
             <td><?php echo $staff->birth_place ?></td>
@@ -69,7 +69,7 @@
             <td><?php echo $staff->id_type ?></td>
             <td><?php echo $staff->id_number ?></td>
             <td><?php echo $staff->id_expiry ?></td>
-            <td><?php echo $staff->info_consent ?></td>
+            <td><?php echo $staff->consent ?></td>
             
             <td><?php echo $staff->location ?></td>
             <td><?php echo $staff->record_date ?></td>
